@@ -12,7 +12,6 @@ import os
 
 # Ensure necessary NLTK data is downloaded
 nltk.download('stopwords')
-nltk.download('punkt')
 
 # Initialize the Porter Stemmer
 pt = PorterStemmer()
