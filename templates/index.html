@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spam Classifier</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Email Spam Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
     <div class="container">
-        <h1>Spam Detection Classifier</h1>
+        <h1>Email Spam Classifier</h1>
         <form action="/predict" method="post">
-            <textarea name="message" placeholder="Enter the message here..." required></textarea>
-            <button type="submit">Predict</button>
+            <label for="text">Enter the email content:</label>
+            <textarea id="text" name="text" rows="10" cols="50"></textarea>
+            <button type="submit">Classify</button>
         </form>
-        {% if prediction %}
-        <div class="result">
-            <h2>Prediction: {{ prediction }}</h2>
-        </div>
-        {% endif %}
     </div>
 </body>
 
